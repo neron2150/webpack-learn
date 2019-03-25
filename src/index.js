@@ -1,6 +1,4 @@
-'use strict'
-import externalFunc from './another.js';
-
-externalFunc('hello, i\'m external');
-const element = document.getElementById('element');
-element.innerHTML = 'Hello, world!';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App';
+ReactDOM.render(<App />, document.getElementById('root'));
