@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { FETCH_DATA_PENDING } from '../../actions';
+import { fetchPosts } from '../../services';
 
 import App from './App';
 

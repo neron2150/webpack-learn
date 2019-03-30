@@ -10,6 +10,10 @@ export default class Details extends React.Component {
     info: 'no data',
   };
 
+  componentDidMount() {
+    this.props.fetchPost(this.props.match.params.id);
+  }
+
   render() {
     const { info } = this.props;
     return info.trim

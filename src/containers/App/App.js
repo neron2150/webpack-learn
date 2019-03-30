@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   renderListItem = (item, index) => (
-    <Link to={`/details/${item.ID || index}`}>{item}</Link>
+    <Link to={`/details/${item.ID || index}`}>{item.title}</Link>
   );
 
   render() {
