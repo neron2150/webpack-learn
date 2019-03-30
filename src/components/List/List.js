@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.css';
 
-export default class List extends React.Component {
+export default class List extends Component {
   static propTypes = {
     list: PropTypes.arrayOf(PropTypes.any).isRequired,
 
@@ -11,12 +11,14 @@ export default class List extends React.Component {
 
   render() {
     return (
-      <ul className = {styles.list}>
+      <ul className={styles.list}>
         {this.props.list.map(
           (item, index) =>
-          (<li key={item.ID || `${item}-${index}`} className = {styles.listItem}>
-            {this.props.renderItem(item, index)}
-          </li>)
+            (
+              <li key={item.ID || `${item}-${index}`} className={styles.listItem}>
+                {this.props.renderItem(item, index)}
+              </li>
+            ),
         )}
       </ul>
     );

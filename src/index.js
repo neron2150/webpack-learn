@@ -7,6 +7,7 @@ import App from './containers/App';
 
 import store from './store';
 import Details from './components/Details';
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter history={window.history}>

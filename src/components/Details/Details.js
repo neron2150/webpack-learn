@@ -19,7 +19,7 @@ export default class Details extends React.Component {
           {Object.entries(info).map(([key, value]) => (
             <div>{`${key}: ${value}`}</div>
           ))}
-          </div>
+        </div>
       );
   }
 }

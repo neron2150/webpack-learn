@@ -28,6 +28,5 @@ export default (state = initialState, action) => {
         error: true,
       };
     default: return state;
-
   }
 };
