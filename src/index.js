@@ -1,15 +1,17 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import App from './App';
+import App from './containers/App';
+
 import store from './store';
-
+import Details from './components/Details';
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
+    <BrowserRouter history={window.history}>
+      <Route exact path="/" component={App} />
+      <Route path="/details/:id" component={Details} />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
