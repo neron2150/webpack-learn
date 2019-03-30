@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './App.css';
-import List from '../../components/List';
+import List from '../List';
 
 class App extends Component {
   static propTypes = {
-    data: PropTypes.arrayOf(PropTypes.any),
     fetchData: PropTypes.func,
   };
 
   static defaultProps = {
-    data: [],
     fetchData: () => {},
   };
 
@@ -26,7 +24,9 @@ class App extends Component {
 
   render() {
     return (
-      <List list={this.props.data} renderItem={this.renderListItem} />
+      <React.Fragment>
+        <List renderItem={this.renderListItem} />
+      </React.Fragment>
     );
   }
 }

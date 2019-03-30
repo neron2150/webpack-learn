@@ -6,10 +6,11 @@ import styles from './styles.css';
 export default class List extends Component {
   static propTypes = {
     list: PropTypes.arrayOf(PropTypes.any).isRequired,
-
+    loading: PropTypes.bool.isRequired,
   };
 
   render() {
+    if (this.props.loading) return 'Loading...';
     return (
       <ul className={styles.list}>
         {this.props.list.map(

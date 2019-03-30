@@ -3,10 +3,6 @@ import { FETCH_DATA_PENDING } from '../../actions';
 
 import App from './App';
 
-const mapStateToProps = state => ({
-  data: state.main.data,
-});
-
 const mapDispatchToProps = dispatch => ({
   fetchData: () => dispatch({
     type: FETCH_DATA_PENDING,
@@ -14,6 +10,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(App);
