@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 
 import Details from '../components/Details';
+import { FETCH_POST_PENDING } from '../actions';
 
 const mapStateToProps = state => ({
-  post: null,
+  info: state.main.post,
+  loading: state.main.loading,
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchPost: ID => dispatch({
-    type: 'FETCH_POST_PENDING',
+    type: FETCH_POST_PENDING,
     payload: { ID },
   }),
 });

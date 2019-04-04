@@ -1,3 +1,35 @@
 .details{
-  
+
+}
+.data{
+  width: auto;
+  font-size: 30px;
+  word-wrap: break-word;
+  color:white;
+  margin: 20px;
+}
+.titleName{
+  width: auto;
+  border-bottom:2px solid;
+  border-color:#999999;
+  border-radius: 20px;
+  font-size: 50px;
+  color:lightBlue;
+  margin-top: 0px;
+  padding: 10px;
+
+  background-color: #444444;
+}
+.list{
+  list-style: none;
+
+}
+.listItem{
+  margin: 5px;
+  border:7px solid;
+  border-color:#999999;
+  border-radius: 20px;
+  width: 400px;
+  background-color: #777777;
+float: left;
 }

@@ -1,7 +1,22 @@
 .list {
   position: static;
+  list-style: none;
+  background-color: gray;
+  width: auto;
+  height: 100%;
+  margin-left: 30%;
+  margin-right: 30%;
+
 }
 
 .listItem {
   position: static;
+  font-size: 30px;
+  margin: 2%;
+  padding: 3%;
+  background-color: lightGray;
+  width: 80%;
+  border: solid 5px;
+  border-radius: 20px;
+  border-color: darkGray;
 }

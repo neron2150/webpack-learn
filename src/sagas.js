@@ -4,6 +4,9 @@ import {
   FETCH_DATA_SUCCESS,
   FETCH_DATA_FAIL,
   FETCH_DATA_PENDING,
+  FETCH_POST_SUCCESS,
+  FETCH_POST_FAIL,
+  FETCH_POST_PENDING,
 } from './actions';
 import { fetchPosts, fetchPost } from './services';
 
@@ -28,12 +31,12 @@ function* handleFetchPost(action) {
     const response = yield call(fetchPost, action.payload.ID);
 
     yield put({
-      type: 'FETCH_POST_SUCCESS',
+      type: FETCH_POST_SUCCESS,
       payload: { post: response },
     });
   } catch (error) {
     yield put({
-      type: 'FETCH_POST_FAIL',
+      type: FETCH_POST_FAIL,
       error,
     });
   }
@@ -43,7 +46,7 @@ export default function* rootSaga() {
   yield all(
     [
       takeLatest(FETCH_DATA_PENDING, handleFetchPosts),
-      takeLatest('FETCH_POST_PENDING', handleFetchPost),
+      takeLatest(FETCH_POST_PENDING, handleFetchPost),
     ],
   );
 }

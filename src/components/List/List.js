@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import Loader from '../Loader';
 import styles from './styles.css';
 
 export default class List extends Component {
@@ -10,7 +10,7 @@ export default class List extends Component {
   };
 
   render() {
-    if (this.props.loading) return 'Loading...';
+    if (this.props.loading) return <Loader />;
     return (
       <ul className={styles.list}>
         {this.props.list.map(
